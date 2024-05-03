@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets'
+import { networks } from '@/data/networks'
+---
+
+<section class="mx-auto mb-12 max-w-[1085px] pl-4">
+	<h2 class="mb-3 text-center text-xl font-medium">Contenido</h2>
+	<ul
+		class="mx-auto flex max-h-[1024px] flex-wrap justify-center gap-2 overflow-y-auto"
+	>
+		{
+			networks.map((network) => {
+				return (
+					<a
+						target="_blank"
+						href={network.url}
+						rel="noopener noreferrer"
+						class="relative after:absolute after:inset-0 after:bg-black after:bg-opacity-50 hover:after:opacity-0"
+					>
+						<Image
+							src={network.srcImage}
+							width={256}
+							height={256}
+							alt={network.alt}
+							class="min-h-64 min-w-64 object-cover"
+						/>
+						<p class="absolute inset-0 top-0 z-50 grid place-content-center text-pretty px-4 py-2 text-center text-base font-medium text-white">
+							{network.title}
+						</p>
+					</a>
+				)
+			})
+		}
+	</ul>
+</section>
+
+<style>
+	a > p {
+		text-shadow:
+			1px 1px 2px black,
+			0 0 1em black,
+			0 0 0.2em black;
+	}
+</style>

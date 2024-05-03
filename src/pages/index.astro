@@ -1,10 +1,51 @@
 ---
+import NavBar from '@/components/NavBar.astro'
 import Layout from '../layouts/Layout.astro'
-import Card from '../components/Card.astro'
+import MainSection from '@/sections/MainSection.astro'
+import NewsSection from '@/sections/NewsSection.astro'
+import NetworksSection from '@/sections/NetworksSection.astro'
 ---
 
-<Layout title="Oceana Pserú">
-	<main class="text-white">Hola tailwind</main>
+<Layout title="Oceana Perú">
+	<NavBar />
+	<MainSection>
+		<!-- <h1 class="">Oceana Perú</h1>
+		<p>
+			Oceana es una organización internacional dedicada a la conservación de los
+			océanos. En Perú, Oceana trabaja para proteger la biodiversidad marina y
+			promover la pesca sostenible.
+		</p>
+		<p>
+			En este sitio web encontrarás información sobre la pesca en Perú, la
+			biodiversidad marina y las campañas de Oceana en el país.
+		</p>
+		<p>
+			Para más información, visita el sitio web de <a
+				href="https://peru.oceana.org/">Oceana Pserú</a
+			>.
+		</p> -->
+		<NewsSection />
+		<NetworksSection />
+	</MainSection>
 </Layout>
 
-<style></style>
+<style is:global>
+	* {
+		font-family:
+			system-ui,
+			-apple-system,
+			BlinkMacSystemFont,
+			'Segoe UI',
+			Roboto,
+			Oxygen,
+			Ubuntu,
+			Cantarell,
+			'Open Sans',
+			'Helvetica Neue',
+			sans-serif;
+	}
+
+	html {
+		background-color: #fff;
+	}
+</style>

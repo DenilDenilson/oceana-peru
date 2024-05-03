@@ -1,0 +1,20 @@
+---
+import logo from '@public/logo.svg'
+import { Image } from 'astro:assets'
+---
+
+<nav
+	class="fixed inset-x-0 top-0 z-50 flex items-center justify-between bg-[#FFF] p-4 shadow-sm shadow-[#465353]"
+>
+	<div class="flex items-center gap-2">
+		<Image src={logo} alt="Astro logo" width={32} />
+		<span class="font-medium tracking-normal text-[#364141]">oceana</span>
+	</div>
+	<a
+		href="https://act.oceana.org/page/141584/donate/1?ea.tracking.id=vanityurl"
+		target="_blank"
+		class="rounded-lg border-2 border-[#364141] p-2 text-xs font-bold tracking-wide text-[#364141] transition-colors duration-200 ease-in-out hover:bg-[#364141] hover:text-white"
+	>
+		Donate Now
+	</a>
+</nav>
